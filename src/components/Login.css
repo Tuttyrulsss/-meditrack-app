@@ -1,0 +1,107 @@
+/* Контейнер всей страницы */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* Визуальный блок формы */
+.login-box {
+    width: 100%;
+    max-width: 340px;
+    padding: 40px 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Логотип + название */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 11px;
+    color: #333;
+}
+
+/* Заголовок формы */
+.form-title {
+    font-size: 20px;
+    margin: 20px 0 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Стили формы */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Кнопка входа */
+.login-button {
+    padding: 12px;
+    background-color: #0bad63;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #099453;
+}
+
+/* Нижние ссылки */
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.form-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}

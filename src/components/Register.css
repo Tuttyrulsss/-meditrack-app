@@ -1,0 +1,111 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* <-- верх, но не прилипает */
+    min-height: 100vh;
+    padding-top: 40px;
+    background-color: #F4F4FB;
+    overflow-y: auto;
+    padding-top: 120px;
+}
+
+/* Основной визуальный блок */
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    /* Чуть шире, чтобы полям было свободнее */
+    padding: 40px 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Arial', sans-serif;
+    color: #BBBBE2;
+}
+
+/* Заголовок и ссылка сверху */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register-title {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.left-link {
+    color: #BBBBE2;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.left-link:hover {
+    text-decoration: underline;
+}
+
+/* Форма */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Отступ между группами */
+}
+
+/* Группа для одного label + input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #BBBBE2;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #BBBBE2;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #333;
+    background-color: white;
+}
+
+/* Подсказка под логином */
+.login-hint {
+    font-size: 11px;
+    color: #BBBBE2;
+    margin-top: 4px;
+}
+
+/* Кнопка */
+.login-button {
+    padding: 12px;
+    background-color: #0bad63;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #099453;
+}
+.form-group select {
+    padding: 10px;
+    border: 1px solid #BBBBE2;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #333;
+    background-color: white;
+}
