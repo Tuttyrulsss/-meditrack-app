@@ -3,9 +3,11 @@ import './Login.css';
 import logo from '../assets/logo.png'; // Убедись, что логотип действительно в этом пути
 import { Link } from 'react-router-dom';
 
+
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -34,16 +36,24 @@ const Login = () => {
                         required
                     />
                     <input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         placeholder="Пароль"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
+                    <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="toggle-password"
+                    >
+                        {showPassword ? "Скрыть" : "Показать"}
+                    </button>
+                    
                     <button type="submit" className="login-button">Войти</button>
 
                     <div className="form-links">
-                        <Link to="/ForgotPassword">Забыли пароль</Link>
+                        <Link to="/forgot-password">Забыли пароль?</Link>
                         <Link to="/register">Зарегистрироваться</Link>
                     </div>
                 </form>

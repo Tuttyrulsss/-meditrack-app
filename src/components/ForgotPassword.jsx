@@ -1,77 +1,42 @@
-import React, { useState } from 'react';
-import './ForgotPassword.css';
+import React from "react";
+import "../components/ForgotPassword.css";
 
-const ForgotPassword = () => {
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [emailSent, setEmailSent] = useState(false);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsLoading(true);
-
-        try {
-            // Здесь будет запрос к вашему API
-          
-            await new Promise(resolve => setTimeout(resolve, 1500));
-
-            setMessage('Инструкции по восстановлению пароля отправлены на вашу почту');
-            setEmailSent(true);
-        } catch (error) {
-            setMessage('Произошла ошибка. Пожалуйста, попробуйте позже.');
-        } finally {
-            setIsLoading(false);
-        }
-    };
-
+function ForgotPassword() {
     return (
-        <div className="forgot-password-container">
-            <div className="forgot-password-form">
-                <div className="logo">
-                    {/* Замените на ваш логотип */}
-                    <h2>ALM System</h2>
-                </div>
+        <div className="forgot-container">
+            <div className="forgot-box">
+                <h2 className="forgot-title">Восстановление пароля</h2>
+                <p className="forgot-subtitle">Пожалуйста, введите ваш ИИН или Email</p>
 
-                {!emailSent ? (
-                    <>
-                        <h3>Восстановление пароля</h3>
-                        <p>Введите email, указанный при регистрации</p>
+                <input
+                    type="text"
+                    placeholder="ИИН или Email"
+                    className="forgot-input"
+                />
 
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-group">
-                                <label htmlFor="email">Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    placeholder="Введите ваш email"
-                                />
-                            </div>
+                <button className="forgot-button">Восстановить</button>
 
-                            <button type="submit" disabled={isLoading}>
-                                {isLoading ? 'Отправка...' : 'Отправить'}
-                            </button>
-                        </form>
-                    </>
-                ) : (
-                    <div className="success-message">
-                        <h3>Проверьте вашу почту</h3>
-                        <p>{message}</p>
-                        <button onClick={() => setEmailSent(false)}>Отправить повторно</button>
+                <p className="forgot-login-link">
+                    <a href="/">Вернуться ко входу</a>
+                </p>
+
+                <div className="forgot-footer">
+                    <p className="forgot-privacy-text">
+                        По настоящему соглашению пользователь обязуется соблюдать меры по
+                        защите персональных данных и врачебной тайны. В случае нарушения
+                        конфиденциальности и допуска несанкционированного доступа к таким
+                        данным, Пользователь несет ответственность в соответствии с
+                        законодательством.
+                    </p>
+
+                    <div className="future-placeholders">
+                        <div className="placeholder-box">QR</div>
+                        <div className="placeholder-box">ЭЦП</div>
                     </div>
-                )}
-
-                {message && !emailSent && <div className="error-message">{message}</div>}
-
-                <div className="links">
-                    <a href="/signin">Вернуться к входу</a>
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default ForgotPassword;

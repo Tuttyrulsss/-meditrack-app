@@ -105,3 +105,12 @@
 .form-links a:hover {
     text-decoration: underline;
 }
+.toggle-password {
+    margin-top: 5px;
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 0.9em;
+    align-self: flex-end;
+}
