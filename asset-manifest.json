@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/-meditrack-app/static/css/main.94d952a3.css",
+    "main.js": "/-meditrack-app/static/js/main.0b38ea84.js",
+    "static/js/453.7e0d5409.chunk.js": "/-meditrack-app/static/js/453.7e0d5409.chunk.js",
+    "index.html": "/-meditrack-app/index.html",
+    "main.94d952a3.css.map": "/-meditrack-app/static/css/main.94d952a3.css.map",
+    "main.0b38ea84.js.map": "/-meditrack-app/static/js/main.0b38ea84.js.map",
+    "453.7e0d5409.chunk.js.map": "/-meditrack-app/static/js/453.7e0d5409.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94d952a3.css",
+    "static/js/main.0b38ea84.js"
+  ]
+}
